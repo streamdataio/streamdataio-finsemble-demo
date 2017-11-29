@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Currencies</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="currencies.css?{cachebuster}">
+  <link rel="stylesheet" type="text/css" href="flag-icon-css/css/flag-icon.css">
+  <script src="currencies.js?{cachebuster}"></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+</head>
+
+<body>
+
+  <img id="logo" src="images/logoSD-350x350.png" />
+  <h3>Choose a currency pair :</h3>
+
+  <div id="currencies">
+    <template id="currenciestab">
+      <currency>
+        <flag1></flag1>
+        <name></name>
+        <flag2></flag2>
+      </currency>
+    </template>
+  </div>
+  <p id="errormsg"></p>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+{
+    "comment": "Houses config for custom components that you'd like to import into Finsemble.",
+    "components": {
+		"Finsemble Documentation": {
+			"window": {
+				"url": "http://documentation.chartiq.com/finsemble",
+				"left": "center",
+				"top": "center",
+				"height": 800,
+				"width": 1000
+			},
+			"component": {},
+			"foreign": {
+				"services": {
+					"dockingService": {
+						"isArrangable": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": false
+					},
+					"Window Manager": {
+						"persistWindowState": false,
+						"FSBLHeader": true,
+						"showLinker": false
+					}
+				}
+			}
+		},
+        "Getting Started Tutorial": {
+            "window": {
+                "url": "https://documentation.chartiq.com/finsemble/tutorial-gettingStarted.html",
+                "height": 800,
+                "width": 1000
+            },
+            "component": {
+                "spawnOnStartup": true
+            },
+            "foreign": {
+                "services": {
+                    "dockingService": {
+                        "isArrangable": true
+                    }
+                },
+                "components": {
+                    "App Launcher": {
+                        "launchableByUser": true
+                    },
+                    "Window Manager": {
+                        "persistWindowState": true,
+                        "FSBLHeader": true,
+                        "showLinker": false
+                    }
+                }
+            }
+        },
+        "Docking Move Mask": {
+			"window": {
+				"url": "$applicationRoot/components/dockingGroupMask/dockingGroupMask.html",
+				"frame": false,
+				"resizable": false,
+				"showTaskbarIcon": false,
+				"options": {
+					"opacity": 0.7,
+					"autoShow": false
+				}
+			},
+			"component": {
+				"category": "system"
+			},
+			"foreign": {
+				"services": {
+					"dockingService": {
+						"isArrangable": false
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": false
+					},
+					"Window Manager": {
+						"FSBLHeader": false,
+						"persistWindowState": false
+					}
+				}
+			}
+        },
+        "windowTitleBar": {
+			"window": {
+				"url": "$applicationRoot/components/windowTitleBar/windowTitleBar.js",
+				"top": "center",
+				"left": "center",
+				"width": 358,
+				"height": 458,
+				"ephemeral": true
+			},
+			"component": {
+				"category": "system"
+			},
+			"foreign": {
+				"services": {
+					"dockingService": {
+						"isArrangable": false
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": false
+					},
+					"Window Manager": {
+						"FSBLHeader": false,
+						"persistWindowState": false
+					}
+				}
+			}
+		},
+        "Currencies": {
+            "window": {
+                "url": "$applicationRoot/components/currencies/currencies.html",
+                "frame": false,
+                "resizable": true,
+                "autoShow": true,
+                "top": 0,
+                "left": 0,
+                "width": 800,
+                "height": 500
+            },
+            "component": {
+                "inject": false
+            },
+            "foreign": {
+                "services": {
+                    "dockingService": {
+                        "canGroup": true,
+                        "isArrangable": true
+                    }
+                },
+                "components": {
+                    "App Launcher": {
+                        "launchableByUser": true
+                    },
+                    "Window Manager": {
+                        "showLinker": false,
+                        "FSBLHeader": true,
+                        "persistWindowState": false
+                    },
+                    "Toolbar": {
+                        "iconClass": "accountList"
+                    }
+                }
+            }
+        },
+        "currencyDetails": {
+            "window": {
+                "url": "$applicationRoot/components/currencyDetails/currencyDetails.html",
+                "frame": false,
+                "resizable": true,
+                "autoShow": true,
+                "top": "center",
+                "left": "center",
+                "width": 800,
+                "height": 600
+            },
+            "component": {
+                "inject": false
+            },
+            "foreign": {
+                "services": {
+                    "dockingService": {
+                        "canGroup": true,
+                        "isArrangable": true
+                    }
+                },
+                "components": {
+                    "App Launcher": {
+                        "launchableByUser": false
+                    },
+                    "Window Manager": {
+                        "showLinker": false,
+                        "FSBLHeader": true,
+                        "persistWindowState": false
+                    },
+                    "Toolbar": {
+                        "iconClass": "currencyDetails"
+                    }
+                }
+            }
+        },
+        "consoleUI": {
+            "window": {
+                "url": "$applicationRoot/components/consoleUI/consoleUI.html",
+                "frame": false,
+                "resizable": true,
+                "autoShow": true,
+                "top": "center",
+                "left": "center",
+                "width": 800,
+                "height": 450
+            },
+            "component": {
+                "inject": false
+            },
+            "foreign": {
+                "services": {
+                    "dockingService": {
+                        "canGroup": true,
+                        "isArrangable": true
+                    }
+                },
+                "components": {
+                    "App Launcher": {
+                        "launchableByUser": false
+                    },
+                    "Window Manager": {
+                        "showLinker": false,
+                        "FSBLHeader": true,
+                        "persistWindowState": false
+                    },
+                    "Toolbar": {
+                        "iconClass": "consoleUI"
+                    }
+                }
+            }
+        }
+    }
+}

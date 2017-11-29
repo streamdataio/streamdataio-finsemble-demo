@@ -1,0 +1,42 @@
+body {
+	background-image:url(images/8.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+h3 {
+ color: rgb(199, 231, 255);
+ text-align: center;
+ margin-right: 12%;
+}
+
+#logo {
+	width: 150px;
+	height: 150px;
+	float: left;
+    z-index: -1;
+}
+
+currency {
+	display: flex;
+	flex-direction: row;
+	width: 200px;
+	margin-left: 42%;
+}
+
+currency > * {
+	display: inline-block;
+	padding: 10px;
+	cursor: pointer;
+	width:100%;
+	text-align:center;
+	color: rgb(199, 231, 255);
+}
+
+currency:hover {
+	background-color: rgb(57, 85, 97);
+}
+
+.fsbl-header {
+	left: 0;
+}

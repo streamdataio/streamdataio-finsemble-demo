@@ -1,0 +1,28 @@
+body {
+	margin:0px;
+	background-color: rgb(229, 243, 252);
+}
+
+p {
+	outline: 1px solid #ccc; padding: 5px; margin: 5px; 
+}
+
+.string { 
+	color: green; 
+}
+
+.number { 
+	color: rgb(0, 153, 255);
+ }
+
+.boolean { 
+	color: blue;
+}
+
+.null { 
+	color: magenta; 
+}
+
+.key { 
+	color: rgb(10, 59, 196); 
+}

@@ -1,0 +1,10 @@
+{
+    "workspaces": [
+        {
+            "name": "Default Workspace",
+            "windows": [],
+            "initializedWindows":[],
+            "components": []
+        }
+	]
+}
