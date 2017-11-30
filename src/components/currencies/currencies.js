@@ -26,7 +26,6 @@ Handle a click on a currency
  */
 function clickCurrency(event) {
 
-
 	console.log("Spawning currency detail window");
 	launchDetailCUrrencyUI(event.data);
 
@@ -58,7 +57,6 @@ function clickCurrency(event) {
 	} else {
 		console.log("Starting event source on a symbol");
 		startEventSource(event.data);
-
 	}
 }
 
@@ -77,7 +75,7 @@ function startEventSource(symbol) {
 
 		console.log("Your browser support SSE");
 
-		let token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABD7C5786B3AAB0D6E590E4CB79";
+		let token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABD7C5786B3ABB34011BA183C91";
 		let token_user_id = "59277";
 		let url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token_userid=" + token_user_id + "&_token=" + token;
 
@@ -185,7 +183,6 @@ function launchConsoleUI(selectedAccountNumber) {
 		}, function (err, response) {
 			console.log("spawn() returns information about the new component", response);
 			accountDetailSpawnResponse = response;
-
 		}
 	);
 }
@@ -199,22 +196,11 @@ FSBL.addEventListener('onReady', function () {
 
 	FSBL.Clients.WindowClient.setWindowTitle("Currencies");
 	renderPage();
-
 	/*
 	For closing the other windows
 	*/
 	$(window).unload(function () {
 		FSBL.Clients.RouterClient.transmit("closeMainWindowChannel", "closeWindow");
-	});
-
-	FSBL.Clients.RouterClient.addListener("closeWindowChannel", function (error, response) {
-		if (error) {
-			console.log("closeWindowChannel Error: " + JSON.stringify(error));
-		} else {
-			console.log("closeWindowChannel Response: " + JSON.stringify(response));
-	
-			NbrReadyComponnents--;
-		}
 	});
 });
 

@@ -58,11 +58,6 @@ FSBL.addEventListener('onReady', function () {
 			window.close();
 		}
 	});
-
-	$(window).unload(function () {
-		FSBL.Clients.RouterClient.transmit("closeWindowChannel", "closeWindow");
-	});
-
 });
 
 //For displaying in the UI
