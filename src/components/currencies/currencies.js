@@ -1,4 +1,5 @@
-var token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABD7C5786B3ABB34011BA183C91";
+var token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABE03F47D25D3D197C78E58A39E";
+
 var tokenUserId = "59277";
 
 var eventSource;
@@ -74,12 +75,18 @@ function startEventSource(symbol) {
 
 		//for closing the event source
 		if (isEventSourceOpen) {
+			console.log("Connection close");
 			eventSource.close();
 		}
 
 		var url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token_userid=" + tokenUserId + "&_token=" + token;
 
 		eventSource = new EventSource(url);
+
+		eventSource.addEventListener("open", function (e) {
+			console.log("Connection open");
+			isEventSourceOpen = true;
+		}, false);
 
 		//Event listener for first data snapshot
 		console.log("Event listener on first data snapshot");
@@ -88,7 +95,6 @@ function startEventSource(symbol) {
 			var firstDataSnapshot = JSON.parse(e.data);
 			FSBL.Clients.RouterClient.transmit("FirstDataSnapshotChannel", firstDataSnapshot);
 			console.log(firstDataSnapshot);
-			isEventSourceOpen = true;
 		}, false);
 
 		//Event listener for patchs  

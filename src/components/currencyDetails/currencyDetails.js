@@ -20,12 +20,6 @@ function update(dataReceived) {
     var text = document.getElementById("Text");
     text.innerHTML = dataReceived[0].Text;
 
-    /*var basecurrency=document.getElementById("BaseCurrency");
-    basecurrency.innerHTML=dataReceived[0].BaseCurrency;
-
-    var quoteCurrency=document.getElementById("QuoteCurrency");
-    quoteCurrency.innerHTML=dataReceived[0].QuoteCurrency;
-    */
     var symbol = document.getElementById("Symbol");
     symbol.innerHTML = dataReceived[0].Symbol;
 
@@ -65,7 +59,6 @@ FSBL.addEventListener('onReady', function () {
             // FINALLY ADD THE NEWLY CREATED ELEMENT WITH JSON DATA TO A CONTAINER.
             var divContainer = document.getElementById("showData");
             divContainer.innerHTML = "";
-            //divContainer.appendChild(paragraph);
             myData = data;
             update(myData);
         } else {
@@ -81,7 +74,6 @@ FSBL.addEventListener('onReady', function () {
             paragraphChanger.innerHTML = JSON.stringify(myData);
             var divContainer = document.getElementById("showData");
             divContainer.innerHTML = "";
-            //divContainer.appendChild(paragraphChanger);
             update(myData);
         } else {
             console.log("PatchChannel Error: " + JSON.stringify(error));
