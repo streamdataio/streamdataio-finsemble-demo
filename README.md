@@ -52,13 +52,18 @@ installation :
 }    
 ```
 
-5. run finsemble using: `npm run dev`
+5. Run finsemble using: `npm run dev`
 
-6. Click on Apps on the top left of the screen.
+6. Click on `App` button on the top left of the screen
+
+7. Click on `currencies`
+
+8. Click on a currency pair to see it's market data details in real time
 
 
+Enjoy!
 
-Project dependencies
+## Project dependencies
 
 The application dependencies are available on GitHub
 
@@ -69,6 +74,5 @@ JSON Patch : https://github.com/fge/json-patch
 
 If you have any questions or feedback, feel free to ask: support@streamdata.io
 
-Enjoy!
 
 *Note: if there is no application shown in the after clicking on "App", please reset finsemble, to get it correctly*
