@@ -14,13 +14,47 @@ installation :
 
 3. Copy `currencies`, `currencyDetails`, `consoleUI` folders to: `Finsemble-seed/src/components/`
 
-4. Add the content `streamdata-components.json` to `Finsemble-seed/configs/application/components.json`
+4. Edit the file `Finsemble-seed/configs/application/components.json` and copy the content of `streamdata-components.json` into it
 
 ```json 
-
+{
+    "components": {
+           "Finsemble Documentation": {
+			"window": {
+				"url": "http://documentation.chartiq.com/finsemble",
+				"left": "center",
+				"top": "center",
+				"height": 800,
+				"width": 1000
+			},
+			"component": {},
+			"foreign": {
+				"services": {
+					"dockingService": {
+						"isArrangable": true
+					}
+				},
+				"components": {
+					"App Launcher": {
+						"launchableByUser": false
+					},
+					"Window Manager": {
+						"persistWindowState": false,
+						"FSBLHeader": true,
+						"showLinker": false
+					}
+				}
+			}
+		},
+		// COPY THE CONTENT HERE
+    }
+    ...
+}    
 ```
 
-5. 
+5. run finsemble using: `npm run dev``
+
+6. Click on Apps on the top left of the screen.
 
 
 
