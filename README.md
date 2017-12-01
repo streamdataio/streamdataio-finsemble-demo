@@ -52,7 +52,7 @@ installation :
 }    
 ```
 
-5. run finsemble using: `npm run dev``
+5. run finsemble using: `npm run dev`
 
 6. Click on Apps on the top left of the screen.
 
