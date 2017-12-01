@@ -1,5 +1,5 @@
 body {
-	background-image:url(images/8.jpg);
+	background-image:url(images/background.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
@@ -10,10 +10,42 @@ h3 {
  margin-right: 12%;
 }
 
-#logo {
+#logoSD {
 	width: 150px;
 	height: 150px;
-	float: left;
+	position: absolute;
+	top: -20px;
+	left: 0px;
+    z-index: -1;
+}
+
+#logoXignite {
+	width: 150px;
+	height: 80px;
+	position: absolute;
+	top: 110px;
+	left: 0px;
+	padding-left: 10px;
+    z-index: -1;
+}
+
+#logoCIQ {
+	width: 150px;
+	height: 80px;
+	position: absolute;
+	top: 200px;
+	left: 0px;
+	padding-left: 10px;
+    z-index: -1;
+}
+
+#logoOpenfin {
+	width: 150px;
+	height: 80px;
+	position: absolute;
+	top: 300px;
+	left: 0px;
+	padding-left: 10px;
     z-index: -1;
 }
 
