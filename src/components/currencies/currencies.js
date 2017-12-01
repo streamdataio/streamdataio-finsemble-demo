@@ -1,3 +1,5 @@
+var token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABD7C5786B3ABB34011BA183C91";
+var tokenUserId = "59277";
 
 var eventSource;
 
@@ -5,8 +7,8 @@ var eventSource;
 var isEventSourceOpen = false;
 //To check if components are ready or not
 var isComponentReady = false;
-//Number of ready componnets
-var NbrReadyComponnents = 0;
+//Number of ready componets
+var nbrReadyComponents = 0;
 
 var currencies = [
 	["EUR/USD", "eurusd", "eu", "us"],
@@ -43,9 +45,9 @@ function clickCurrency(event) {
 				console.log("whenReadyChannel Error: " + JSON.stringify(error));
 			} else {
 
-				NbrReadyComponnents++;
+				nbrReadyComponents++;
 
-				if (NbrReadyComponnents === 2) {
+				if (nbrReadyComponents === 2) {
 					console.log("whenReadyChannel Response: " + JSON.stringify(response));
 					console.log("When the components are ready");
 					startEventSource(event.data);
@@ -66,47 +68,45 @@ Start event source on a symbole injected in param
  */
 function startEventSource(symbol) {
 
-	//for closing the event source
-	if (isEventSourceOpen) {
-		eventSource.close();
-	}
-
 	if (typeof (EventSource) !== "undefined") {
 
 		console.log("Your browser support SSE");
 
-		let token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABD7C5786B3ABB34011BA183C91";
-		let token_user_id = "59277";
-		let url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token_userid=" + token_user_id + "&_token=" + token;
+		//for closing the event source
+		if (isEventSourceOpen) {
+			eventSource.close();
+		}
+
+		var url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token_userid=" + tokenUserId + "&_token=" + token;
 
 		eventSource = new EventSource(url);
 
-		//Event listner for first data snapshot
-		console.log("Event listner on first data snapshot");
+		//Event listener for first data snapshot
+		console.log("Event listener on first data snapshot");
 		eventSource.addEventListener("data", function (e) {
-			console.log("First data snapshot :");
+			console.log("First data snapshot:");
 			var firstDataSnapshot = JSON.parse(e.data);
 			FSBL.Clients.RouterClient.transmit("FirstDataSnapshotChannel", firstDataSnapshot);
 			console.log(firstDataSnapshot);
 			isEventSourceOpen = true;
 		}, false);
 
-		//Event listner for patchs  
-		console.log("Event listner on patchs");
+		//Event listener for patchs  
+		console.log("Event listener on patchs");
 		eventSource.addEventListener("patch", function (e) {
-			console.log("Patchs :");
+			console.log("Patch:");
 			var patch = JSON.parse(e.data);
 			FSBL.Clients.RouterClient.transmit("PatchChannel", patch);
 			console.log(patch);
 		}, false);
 
-		//Event listner for errors from data source
-		console.log("Event listner on error");
+		//Event listener for errors from data source
+		console.log("Event listener on error");
 		eventSource.addEventListener("error", function (e) {
 			console.log("Error message :");
-			var firstDataSnapshot3 = JSON.parse(e.data);
-			FSBL.Clients.RouterClient.transmit("ErrorMessageChannel", firstDataSnapshot3);
-			console.log(firstDataSnapshot3);
+			var errorData = JSON.parse(e.data);
+			FSBL.Clients.RouterClient.transmit("ErrorMessageChannel", errorData);
+			console.log(errorData);
 		}, false);
 
 	} else {
@@ -125,8 +125,8 @@ function renderPage() {
 
 		var row = $(document.importNode(template.content, true));
 		row.find("name").text(currency[0]);
-		row.find("flag1").append("<span class=" + "'flag-icon flag-icon-" + currency[2] + "'" + "></span>");
-		row.find("flag2").append("<span class=" + "'flag-icon flag-icon-" + currency[3] + "'" + "></span>");
+		row.find("flag-left").append("<span class=" + "'flag-icon flag-icon-" + currency[2] + "'" + "></span>");
+		row.find("flag-right").append("<span class=" + "'flag-icon flag-icon-" + currency[3] + "'" + "></span>");
 		row.find("name").parent().click(currency[1], clickCurrency);
 		$("#currencies").append(row);
 
@@ -154,7 +154,7 @@ function launchDetailCUrrencyUI(selectedAccountNumber) {
 			left: "adjacent",
 			spawnIfNotFound: true,
 		}, function (err, response) {
-			console.log("PPZZ spawn() returns information about the new component", response);
+			console.log("spawn() returns information about the new component", response);
 			accountDetailSpawnResponse = response;
 		}
 	);
