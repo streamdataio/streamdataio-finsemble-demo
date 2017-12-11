@@ -51,9 +51,9 @@ Installation :
 }    
 ```
 
-5. Edit the Finsemble-seed/src/components/currenices/currencies.js and replace:
+5. Edit the `Finsemble-seed/src/components/currenices/currencies.js` and replace:
 
-var token = "<YOUR STREAMDATAIO TOKEN>";
+var token = "<YOUR STREAMDATA TOKEN>";
 
 with your Xignite token you can get at http://www.xignite.com 
 
