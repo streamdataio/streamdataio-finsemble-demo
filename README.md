@@ -45,20 +45,15 @@ installation :
 					}
 				}
 			}
-		},
+		}, //Insert comma 
 		// COPY THE CONTENT HERE
     }
-    ...
 }    
 ```
 
 5. Run finsemble using: `npm run dev`
 
-6. Click on `App` button on the top left of the screen
-
-7. Click on `currencies`
-
-8. Click on a currency pair to see it's market data details in real time
+6. Click on a currency pair to see it's market data details in real time
 
 
 Enjoy!

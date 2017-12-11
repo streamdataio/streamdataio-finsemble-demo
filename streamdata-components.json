@@ -10,7 +10,7 @@
                 "height": 500
             },
             "component": {
-                "inject": false
+                "spawnOnStartup": true
             },
             "foreign": {
                 "services": {
