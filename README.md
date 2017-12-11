@@ -51,7 +51,9 @@ Installation :
 }    
 ```
 
-5. Edit the `Finsemble-seed/src/components/currenices/currencies.js` and replace: var token = "<YOUR STREAMDATA TOKEN>"; with your Xignite token you can get at http://www.xignite.com 
+5. Edit the `Finsemble-seed/src/components/currenices/currencies.js` 
+and replace: var token = "<YOUR STREAMDATA TOKEN>"; 
+with your Xignite token you can get at http://www.xignite.com 
 
 6. Run finsemble using: `npm run dev`.
 
