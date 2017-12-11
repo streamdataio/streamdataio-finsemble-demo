@@ -2,7 +2,7 @@
 
 This application shows how to use streamdata.io proxy and Finsemble framework to get currency market data in multi-window mode.
 
-Finsemble is a framework for building seamless HTML5 desktop applications. for more details: http://documentation.chartiq.com/finsemble
+Finsemble is a framework for building seamless HTML5 desktop applications. Read more here: http://documentation.chartiq.com/finsemble
 
 # Step by step setup
 
@@ -10,11 +10,11 @@ Installation :
 
 1. Install Finsemble framework by following Finsembles getting started: http://documentation.chartiq.com/finsemble/tutorial-gettingStarted.html
 
-2. Download this Github repository
+2. Download this Github repository.
 
-3. Copy `currencies`, `currencyDetails`, `consoleUI` folders to: `Finsemble-seed/src/components/`
+3. Copy `currencies`, `currencyDetails`, `consoleUI` folders to: `Finsemble-seed/src/components/`.
 
-4. Edit the file `Finsemble-seed/configs/application/components.json` and copy the content of `streamdata-components.json` into it
+4. Edit the file `Finsemble-seed/configs/application/components.json` and copy the content of `streamdata-components.json` into it:
 
 ```json 
 {
@@ -50,15 +50,15 @@ Installation :
     }
 }    
 ```
-5. Run finsemble using: `npm run dev`
+5. Run finsemble using: `npm run dev`.
 
-6. Click on a currency pair to see it's market data details in real time
+6. Click on a currency pair to see it's market data details in real time.
 
 Enjoy!
 
 ## Project dependencies
 
-The application dependencies are available on GitHub
+The application dependencies are available on GitHub:
 
 JSON Patch : https://github.com/fge/json-patch
 
