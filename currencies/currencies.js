@@ -1,6 +1,4 @@
-var token = "9823544350EB4C5A05745D39CD4FCF3E413366E9964FC382D8D223E0A2849A39A0B3E88843425ABE03F47D25D3D197C78E58A39E";
-
-var tokenUserId = "59277";
+var token = "<YOUR XIGNITE TOKEN>";
 
 var eventSource;
 
@@ -79,7 +77,7 @@ function startEventSource(symbol) {
 			eventSource.close();
 		}
 
-		var url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token_userid=" + tokenUserId + "&_token=" + token;
+		var url = "https://stream.xignite.com/xGlobalCurrencies.json/GetRealTimeRates?symbols=" + symbol + "&_token=" + token;
 
 		eventSource = new EventSource(url);
 

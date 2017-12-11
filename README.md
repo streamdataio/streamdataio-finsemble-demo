@@ -16,7 +16,7 @@ Installation :
 
 4. Edit the file `Finsemble-seed/configs/application/components.json` and copy the content of `streamdata-components.json` into it:
 
-`json 
+```json 
 {
     "components": {
            "Finsemble Documentation": {
@@ -49,10 +49,15 @@ Installation :
 		// COPY THE CONTENT HERE
     }
 }    
-`
-5. Run finsemble using: `npm run dev`.
+```
 
-6. Click on a currency pair to see it's market data details in real time.
+5. Edit the `Finsemble-seed/src/components/currenices/currencies.js` and replace:
+var token = "<YOUR STREAMDATAIO TOKEN>";
+with your Xignite token you can get at http://www.xignite.com 
+
+6. Run finsemble using: `npm run dev`.
+
+7. Click on a currency pair to see it's market data details in real time.
 
 Enjoy!
 
