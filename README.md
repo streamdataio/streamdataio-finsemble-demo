@@ -50,7 +50,7 @@ Installation :
     }    
     ```
 
-5. Edit the file `Finsemble-seed/src/components/currenices/currencies.js` with your Xignite token you can get at <http://www.xignite.com>
+5. Edit the file `Finsemble-seed/src/components/currencies/currencies.js` with your Xignite token you can get at <http://www.xignite.com>
     ```json
     var token = "<YOUR STREAMDATA TOKEN>";
     ```  
