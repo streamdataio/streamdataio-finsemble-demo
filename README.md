@@ -8,7 +8,7 @@ Finsemble is a framework for building seamless HTML5 desktop applications. Read 
 
 Installation :
 
-1. Install Finsemble framework by following Finsembles getting started: http://documentation.chartiq.com/finsemble/tutorial-gettingStarted.html
+1. Install Finsemble framework by following Finsemble getting started: http://documentation.chartiq.com/finsemble/tutorial-gettingStarted.html
 
 2. Download this Github repository.
 
