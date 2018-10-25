@@ -52,7 +52,7 @@ Installation :
 
 5. Edit the file `Finsemble-seed/src/components/currencies/currencies.js` with your Xignite token you can get at <http://www.xignite.com>
     ```json
-    var token = "<YOUR STREAMDATA TOKEN>";
+    var token = "<YOUR XIGNITE TOKEN>";
     ```  
 
 6. Run finsemble using: `npm run dev`.
